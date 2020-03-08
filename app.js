@@ -10,7 +10,7 @@ const options = {
       port: process.env.PORT
     }
   };
-  const url = process.env.APP_URL || config.heroku_host;
+const url = process.env.APP_URL || config.heroku_host;
 const bot = new TelegramBot(TOKEN, options);
 
 bot.setWebHook(`${url}/bot${TOKEN}`);
