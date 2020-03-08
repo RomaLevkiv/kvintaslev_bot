@@ -4,20 +4,17 @@ const handler = require('./src/handlers')
 const keyboard = require('./src/keyboards')
 const request = require('request')
 
-const TOKEN = config.TOKEN;
-// const options = {
-//     webHook: {
-//       port: process.env.PORT
-//     }
-//   };
-  //const url = process.env.APP_URL || 'https://safe-sands-47012.herokuapp.com:443';
-//const bot = new TelegramBot(TOKEN, options);
+const TOKEN = process.env.TELEGRAM_TOKEN||config.TOKEN;
+const options = {
+    webHook: {
+      port: process.env.PORT
+    }
+  };
+  const url = process.env.APP_URL || config.heroku_host;
+const bot = new TelegramBot(TOKEN, options);
 
-//bot.setWebHook(`${url}/bot${TOKEN}`);
+bot.setWebHook(`${url}/bot${TOKEN}`);
 
-  const bot = new TelegramBot(TOKEN, {
-    polling: true
-})
 
 bot.onText(/\/curs/, (msg, match) => {
     const id = msg.chat.id
