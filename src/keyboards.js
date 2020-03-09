@@ -2,7 +2,7 @@ module.exports = {
     main:[
         [
             {
-                text: 'SEND LOCATION',                        
+                text: 'WEATHER',                        
                 request_location: true
             }
         ],
