@@ -1,20 +1,34 @@
 module.exports = {
+    main:[
+        [
+            {
+                text: 'SEND LOCATION',                        
+                request_location: true
+            }
+        ],
+        [
+            {
+                text: 'EXCHANGE RATES',
+                callback_data: 'exchangeRates'
+            }
+        ]
+    ],
     exchangeRates: [
         [
             {
-                text: 'EUR', 
+                text: '€ EUR', 
                 callback_data: 'EUR'
             },
             {
-                text: 'USD', 
+                text: '$ USD', 
                 callback_data: 'USD'
             },
             {
-                text: 'RUR', 
+                text: '₽ RUR', 
                 callback_data: 'RUR'
             },
             {
-                text: 'BTC', 
+                text: '₿ BTC', 
                 callback_data: 'BTC'
             }
         ]
