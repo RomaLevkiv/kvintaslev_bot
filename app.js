@@ -1,5 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
-const config = require('./src/config')
+const config = require('./src/config/config')
 const handler = require('./src/handlers')
 const keyboard = require('./src/keyboards')
 

@@ -1,4 +1,4 @@
-const config = require('./config')
+const config = require('./config/config')
 const req_promise = require('request-promise')
 
 function getWeatherData(coords) {
